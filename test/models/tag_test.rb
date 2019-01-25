@@ -1,23 +1,16 @@
 # == Schema Information
 #
-# Table name: comments
+# Table name: tags
 #
 #  id         :integer          not null, primary key
-#  comment    :text             not null
 #  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  board_id   :integer
-#  voard_id   :integer
-#
-# Indexes
-#
-#  index_comments_on_voard_id  (voard_id)
 #
 
 require 'test_helper'
 
-class CommentTest < ActiveSupport::TestCase
+class TagTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

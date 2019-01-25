@@ -7,6 +7,7 @@
 #  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  board_id   :integer
 #  voard_id   :integer
 #
 # Indexes
@@ -15,5 +16,8 @@
 #
 
 class Comment < ApplicationRecord
-  belongs_to :voard
+   belongs_to :board
+
+  validates :name, presence: true, length: { maximum: 10}
+  validates :comment, presence: true, length: { maximum: 1000}
 end
